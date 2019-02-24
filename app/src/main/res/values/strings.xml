@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lab</string>
+    <string name="str_start">Введите аппроксимируемую функцию:</string>
+    <string name="str_interval_1">Xmin = </string>
+    <string name="str_interval_2">Xmax = </string>
+    <string name="str_sign">,</string>
+    <string name="text_interval">Введите отрезок интерполяции:</string>
+    <string name="str_OrderNumberText">Введите порядок интерполяционного  многочлена Ньютона n:</string>
+    <string name="str_find">Найти интерполяционный многочлен Ньютона</string>
+    <string name="str_answerText">Ответ:</string>
+</resources>
