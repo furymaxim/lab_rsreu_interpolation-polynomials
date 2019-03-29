@@ -32,9 +32,9 @@ public class FindPolynomial {
 
     public String Calculation() { //Метод, создающий полином Ньютона с использованием разделенных разностей
 
-        String result = "Simplify(";// Строка, в которой формируется полином
+        double x;
 
-        String sign;
+        String result = "Simplify(";// Строка, в которой формируется полином
 
         SetOfValues = new Values[n];// Создание массива объектов Values для хранения разделенных разностей различных порядков
 
@@ -48,12 +48,15 @@ public class FindPolynomial {
                                                                             //из массива объектов Values
         for (int i=1;i<n;i++){
 
-            sign = (SetOfValues[i].FunctionValue[0] >= 0) ? "+" : "";
+            result = result + ((SetOfValues[i].FunctionValue[0] >= 0) ? "+" : "");
 
-            result = result + sign + Double.toString(SetOfValues[i].FunctionValue[0]);
+            result = result + Double.toString(SetOfValues[i].FunctionValue[0]);
+
             for (int j=0;j<i;j++){
-                sign = (PointX[j] >= 0) ? "+" : "";
-                result = result + "*(x" + sign + Double.toString(PointX[j])+")";
+
+                x = PointX[j];
+
+                result = result + "*(x" + ((x >= 0) ? "-" : "+") + Double.toString(Math.abs(x))+")";
             }
         }
 
